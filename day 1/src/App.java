@@ -40,10 +40,6 @@ public class App {
 		 * System.out.print((char)i);
 		 */
 
-		// System.out.println(fr);
-
-		// System.out.println(Input);
-
 		lines = Input.split("\\R");
 		Collections.addAll(linesArr, lines);
 		linesArr.add("");
@@ -51,20 +47,7 @@ public class App {
 		lines2 = new String[linesArr.size()];
 		linesArr.copyInto(lines2);
 
-		System.out.println(Arrays.toString(lines));
-		System.out.println("\n");
-		System.out.println("\n");
-		System.out.println("\n");
-		System.out.println(linesArr);
-		System.out.println("\n");
-		System.out.println("\n");
-		System.out.println("\n");
-		System.out.println(Arrays.toString(lines2));
-
-		System.out.println("\n");
-		// System.out.println(elf1.createGroup());
-
-		System.out.println("lines.length: " + lines.length);
+		System.out.println("-lines.length: " + lines.length + "\n");
 
 		ArrayList<Integer> elvesInventory = new ArrayList<Integer>();
 
@@ -73,15 +56,12 @@ public class App {
 			// Group k = new Group(start);
 			Group.createGroup(start); // const end = someOperation(start);
 			start = (Group.getEndIndex() + 1); // start = end;
-			elvesInventory.add(Group.getGroupTotal()); // place the final total in the arraylist
+			elvesInventory.add(Group.getGroupTotal()); // place the final total in the arraylist }
 
-		} // }
+		}
 
-		System.out.println(elvesInventory);
-		System.out.println("\n");
-		System.out.println("\n");
-		System.out.println("\n");
-		System.out.println("Largest array element: " + Collections.max(elvesInventory));
+		System.out.println(
+				"-Largest array element: " + Collections.max(elvesInventory) + "(this is our solution)" + "\n");
 
 	}
 }
