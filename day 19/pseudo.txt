@@ -1,0 +1,20 @@
+
+//solution 1
+
+
+public Class orebot
+{
+    public void collectOre()
+    {
+
+    }
+}
+
+
+
+int
+
+
+
+
+
