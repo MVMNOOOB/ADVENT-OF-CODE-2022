@@ -17,6 +17,7 @@ public class App {
 	public static String[] lines;
 	public static Vector<String> linesArr = new Vector<String>();
 	public static String[] lines2;
+	public static int elfLeaderBoard = 0;
 
 	// Main driver method
 	public static void main(String[] args) throws Exception {
@@ -62,6 +63,14 @@ public class App {
 
 		System.out.println(
 				"-Largest array element: " + Collections.max(elvesInventory) + "(this is our solution)" + "\n");
+
+		// Part B
+		for (int i2 = 0; i2 < 3; i2++) {
+			elfLeaderBoard += Collections.max(elvesInventory); // adds value of largest array element, then removes said
+			elvesInventory.remove(Collections.max(elvesInventory)); // element
+		}
+
+		System.out.println("Part B: " + "\n" + "-Total calories of top three elves: " + elfLeaderBoard);
 
 	}
 }
