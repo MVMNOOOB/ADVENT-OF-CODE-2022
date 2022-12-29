@@ -1,9 +1,9 @@
 
 wordList = []
 
-input = open("input.txt").read()
+input = open("input2.txt").read()
 
-# creating a string array that holds every line fo the input as an element
+# creating a string array that holds every line of the input as an element
 wordList = input.splitlines()
 
 
@@ -43,7 +43,7 @@ def my_func(bigger, smaller):  # see previous comment
     return result
 
 
-endList = []  # this is our next string array that holds just the character each rucksack contains
+endList = []  # this is our next string array that holds just the common character each rucksack contains
 for element in wordList:
     firstpart, secondpart = element[:len(
         element)//2], element[len(element)//2:]  # splits each element of the string array down the middle
@@ -54,10 +54,6 @@ for element in wordList:
 
     final_output = common_characters
     endList.append(final_output)
-
-for element in endList:
-    if (len(element) > 1):
-        element = element[0:0]
 
 
 finalTotal = 0
