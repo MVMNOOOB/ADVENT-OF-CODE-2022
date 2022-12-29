@@ -1,5 +1,7 @@
 
-wordList = []
+wordList = []  # this is a string array that holds every line of the input as an element
+endList = []  # this is our next string array that holds just the common character each rucksack contains
+finalTotal = 0  # this is the int that all of our priority values get added to at the end
 
 input = open("input2.txt").read()
 
@@ -43,7 +45,6 @@ def my_func(bigger, smaller):  # see previous comment
     return result
 
 
-endList = []  # this is our next string array that holds just the common character each rucksack contains
 for element in wordList:
     firstpart, secondpart = element[:len(
         element)//2], element[len(element)//2:]  # splits each element of the string array down the middle
@@ -56,9 +57,6 @@ for element in wordList:
     endList.append(final_output)
 
 
-finalTotal = 0
-
-
 # takes the unicode value of the first character of the string passed in,
 def stringPointCalculator(endString):
     # then returns the assigned priority value(see instructions.txt)
@@ -69,7 +67,6 @@ def stringPointCalculator(endString):
         return finalString - 96
 
 
-finalTotal = 0
 for element in endList:  # we add the priority value of each element to the finalTotal integer, then print it
     finalTotal += stringPointCalculator(element)
 
